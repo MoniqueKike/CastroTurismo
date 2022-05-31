@@ -124,4 +124,13 @@ public class Rodoviaria extends PessoaJuridica {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return String.format(
+				"Rodoviaria [horaAbertura=%s, horaFechamento=%s, taxaEmbarque=%s, PessoaJuridica=%s, getCNPJ()=%s, getIncricaoEstadual()=%s, getPessoa()=%s, getId()=%s, getNome()=%s, getTelefoneCelular()=%s, getEmail()=%s, getLogradouro()=%s, getComplemento()=%s, getNumero()=%s, getCidade()=%s]",
+				horaAbertura, horaFechamento, taxaEmbarque, PessoaJuridica, getCNPJ(), getIncricaoEstadual(),
+				getPessoa(), getId(), getNome(), getTelefoneCelular(), getEmail(), getLogradouro(), getComplemento(),
+				getNumero(), getCidade());
+	}
+
 }

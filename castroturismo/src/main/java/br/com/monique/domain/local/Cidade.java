@@ -4,13 +4,11 @@
 package br.com.monique.domain.local;
 import java.io.Serializable;
 
-import br.com.monique.domain.local.pais.Pais;
-
 /**
  * @author monique.0935
  *
  */
-public abstract class cidade implements Serializable {
+public class Cidade implements Serializable {
 
 	private static final long serialVersionsUID = 1L;
 
@@ -18,12 +16,12 @@ public abstract class cidade implements Serializable {
 
 	private String nome;
 
-	private estado estado;
+	private Estado estado;
 
 	/**
 	 * 
 	 */
-	public cidade() {
+	public Cidade() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -59,14 +57,14 @@ public abstract class cidade implements Serializable {
 	/**
 	 * @return the estado
 	 */
-	public estado getEstado() {
+	public Estado getEstado() {
 		return estado;
 	}
 
 	/**
 	 * @param estado the estado to set
 	 */
-	public void setEstado(estado estado) {
+	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 
@@ -95,7 +93,7 @@ public abstract class cidade implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		cidade other = (cidade) obj;
+		Cidade other = (Cidade) obj;
 		if (estado == null) {
 			if (other.estado != null)
 				return false;
@@ -112,6 +110,11 @@ public abstract class cidade implements Serializable {
 		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Cidade [id=%s, nome=%s, estado=%s]", id, nome, estado);
 	}
 	
 	

@@ -121,6 +121,15 @@ public class Motorista extends Funcionario implements Serializable {
 	public void setFuncionario(Funcionario funcionario) {
 		Funcionario = funcionario;
 	}
+
+	@Override
+	public String toString() {
+		return String.format(
+				"Motorista [CNH=%s, EAR=%s, CategoriaCNH=%s, Funcionario=%s, getNumeroRegistro()=%s, getEstaAtivo()=%s, getPessoaFisica()=%s, getCPF()=%s, getRG()=%s, getOrgaoEmissor()=%s, getDataNascimento()=%s, getPessoa()=%s, getId()=%s, getNome()=%s, getTelefoneCelular()=%s, getEmail()=%s, getLogradouro()=%s, getComplemento()=%s, getNumero()=%s, getCidade()=%s]",
+				CNH, EAR, CategoriaCNH, Funcionario, getNumeroRegistro(), getEstaAtivo(), getPessoaFisica(), getCPF(),
+				getRG(), getOrgaoEmissor(), getDataNascimento(), getPessoa(), getId(), getNome(), getTelefoneCelular(),
+				getEmail(), getLogradouro(), getComplemento(), getNumero(), getCidade());
+	}
 	
 	
 }

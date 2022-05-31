@@ -1,12 +1,13 @@
 /**
  * 
  */
-package br.com.monique.domain.viagem;
+package br.com.monique.domain.itinerario;
 import java.io.Serializable;
 
 import br.com.monique.domain.pessoa.Motorista;
 import br.com.monique.domain.pessoa.Rodoviaria;
 import br.com.monique.domain.veiculo.Onibus;
+import br.com.monique.domain.viagem.Passagem;
 /**
  * @author monique.0935
  *
@@ -28,6 +29,10 @@ public class Rota implements Serializable {
 	private Onibus onibus;
 	
 	private Motorista motorista;
+	
+	private Rodoviaria rodoviaria;
+	
+	private Passagem passagem;
 
 	/**
 	 * 
@@ -136,6 +141,34 @@ public class Rota implements Serializable {
 	}
 
 	/**
+	 * @return the rodoviaria
+	 */
+	public Rodoviaria getRodoviaria() {
+		return rodoviaria;
+	}
+
+	/**
+	 * @param rodoviaria the rodoviaria to set
+	 */
+	public void setRodoviaria(Rodoviaria rodoviaria) {
+		this.rodoviaria = rodoviaria;
+	}
+
+	/**
+	 * @return the passagem
+	 */
+	public Passagem getPassagem() {
+		return passagem;
+	}
+
+	/**
+	 * @param passagem the passagem to set
+	 */
+	public void setPassagem(Passagem passagem) {
+		this.passagem = passagem;
+	}
+
+	/**
 	 * @return the serialversionuid
 	 */
 	public static long getSerialversionuid() {
@@ -151,8 +184,10 @@ public class Rota implements Serializable {
 		result = prime * result + ((motorista == null) ? 0 : motorista.hashCode());
 		result = prime * result + ((onibus == null) ? 0 : onibus.hashCode());
 		result = prime * result + ((origem == null) ? 0 : origem.hashCode());
+		result = prime * result + ((passagem == null) ? 0 : passagem.hashCode());
 		result = prime * result + ((precopassagem == null) ? 0 : precopassagem.hashCode());
 		result = prime * result + ((quilometragem == null) ? 0 : quilometragem.hashCode());
+		result = prime * result + ((rodoviaria == null) ? 0 : rodoviaria.hashCode());
 		return result;
 	}
 
@@ -190,6 +225,11 @@ public class Rota implements Serializable {
 				return false;
 		} else if (!origem.equals(other.origem))
 			return false;
+		if (passagem == null) {
+			if (other.passagem != null)
+				return false;
+		} else if (!passagem.equals(other.passagem))
+			return false;
 		if (precopassagem == null) {
 			if (other.precopassagem != null)
 				return false;
@@ -200,8 +240,15 @@ public class Rota implements Serializable {
 				return false;
 		} else if (!quilometragem.equals(other.quilometragem))
 			return false;
+		if (rodoviaria == null) {
+			if (other.rodoviaria != null)
+				return false;
+		} else if (!rodoviaria.equals(other.rodoviaria))
+			return false;
 		return true;
 	}
+
 	
 	
+
 }

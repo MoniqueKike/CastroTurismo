@@ -1,7 +1,7 @@
 package br.com.monique.domain.pessoa;
 import java.io.Serializable;
 
-import br.com.monique.domain.local.cidade;
+import br.com.monique.domain.local.Cidade;
 
 /**
  * Classe que recebe os dados de Pessoa.
@@ -28,7 +28,7 @@ public abstract class Pessoa implements Serializable {
 	
 	private Integer numero; 
 
-	private cidade cidade;
+	private Cidade cidade;
 
 	/**
 	 * 
@@ -139,14 +139,14 @@ public abstract class Pessoa implements Serializable {
 	/**
 	 * @return the cidade
 	 */
-	public cidade getCidade() {
+	public Cidade getCidade() {
 		return cidade;
 	}
 
 	/**
 	 * @param cidade the cidade to set
 	 */
-	public void setCidade(cidade cidade) {
+	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
 
@@ -223,6 +223,8 @@ public abstract class Pessoa implements Serializable {
 			return false;
 		return true;
 	}
-	
+
 	
 }
+	
+	

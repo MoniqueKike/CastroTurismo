@@ -135,6 +135,15 @@ public class Passageiro extends PessoaFisica implements Serializable {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return String.format(
+				"Passageiro [NumeroCartao=%s, ValidadeCartao=%s, Seguranca=%s, PessoaFisica=%s, getCPF()=%s, getRG()=%s, getOrgaoEmissor()=%s, getDataNascimento()=%s, getPessoa()=%s, getId()=%s, getNome()=%s, getTelefoneCelular()=%s, getEmail()=%s, getLogradouro()=%s, getComplemento()=%s, getNumero()=%s, getCidade()=%s]",
+				NumeroCartao, ValidadeCartao, Seguranca, PessoaFisica, getCPF(), getRG(), getOrgaoEmissor(),
+				getDataNascimento(), getPessoa(), getId(), getNome(), getTelefoneCelular(), getEmail(), getLogradouro(),
+				getComplemento(), getNumero(), getCidade());
+	}
 	
 	
 }

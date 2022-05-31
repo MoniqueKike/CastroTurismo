@@ -14,6 +14,8 @@ public class Onibus extends Veiculo implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L; 
 
+	private Integer Id;
+	
 	private Integer poltrona;
 
 	/**
@@ -68,6 +70,20 @@ public class Onibus extends Veiculo implements Serializable {
 		} else if (!poltrona.equals(other.poltrona))
 			return false;
 		return true;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return Id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		Id = id;
 	}
 	
 	

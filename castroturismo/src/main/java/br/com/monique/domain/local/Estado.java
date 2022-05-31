@@ -2,8 +2,6 @@ package br.com.monique.domain.local;
 
 import java.io.Serializable;
 
-import br.com.monique.domain.local.pais.Pais;
-
 /**
  * Classe que recebe os dados de Estado.
  * 
@@ -11,9 +9,12 @@ import br.com.monique.domain.local.pais.Pais;
  * @version 1.0.0
  * @since 1.0.0
  */
-public abstract class estado implements Serializable {
+public class Estado implements Serializable {
 
-	private static final long serialVersionsUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private Integer id;
 
@@ -24,7 +25,7 @@ public abstract class estado implements Serializable {
 	/**
 	 * 
 	 */
-	public estado() {
+	public Estado() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -71,12 +72,7 @@ public abstract class estado implements Serializable {
 		this.pais = pais;
 	}
 
-	/**
-	 * @return the serialversionsuid
-	 */
-	public static long getSerialversionsuid() {
-		return serialVersionsUID;
-	}
+
 
 	@Override
 	public int hashCode() {
@@ -96,7 +92,7 @@ public abstract class estado implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		estado other = (estado) obj;
+		Estado other = (Estado) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
